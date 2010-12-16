@@ -1,3 +1,4 @@
+include Mongoid
 module Mongoid::Search
   extend ActiveSupport::Concern
   
