@@ -22,7 +22,7 @@ module Mongoid::Search
     
     def search(query, options={})
       return self.all if query.blank? && allow_empty_search
-      self.send("#{(options[:match]||self.match).to_s}_in", :_keywords => KeywordsExtractor.extract(query).map { |q| /\b#{q}\b/ })
+      self.send("#{(options[:match]||self.match).to_s}_in", :_keywords => KeywordsExtractor.extract(query))
     end
   end
   
