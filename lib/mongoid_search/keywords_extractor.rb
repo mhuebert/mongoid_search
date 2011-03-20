@@ -1,4 +1,4 @@
-require 'fast_stemmer'
+require 'stemmer'
 class KeywordsExtractor
   def self.extract(text)
     # return [] if text.blank?
